@@ -44,7 +44,7 @@
 
     {% for x in object_list %}
 
-      <div class="text-relative" style="margin-top: 90px; text-align: center; filter: blur;">
+      <div id="{{x.id}}" class="text-relative" style="margin-top: 90px; text-align: center; filter: blur;">
         <h1>{{x.titulo}}</h1>
         <button class="btn btn-primary" onclick="AlterColor2({{x.id}})">Modo escuro</button>
         <button class="btn btn-primary" onclick="AlterColor({{x.id}})">Modo claro</button><br><br>
