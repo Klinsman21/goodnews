@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+
+{% block title %}Good News - About{% endblock %}
+
+{% block content %}
+
+
+{% if user.is_authenticated %}
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Good News</font></font></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Página inicial</font></font><span class="sr-only"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"></font></font></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Notícias regionais</font></font></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Noticias internacionais</font></font></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/create/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Publicar uma notícia</font></font></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/about/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sobre</font></font></a>
+          </li>
+        </ul>
+      <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link"><i class="material-icons" style="font-size:30px;">how_to_reg</i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="accounts/logout"><i class="material-icons" style="font-size:30px;">power_settings_new</i></a>
+            </li>
+      </ul>
+      </div>
+    </nav>
+
+  {% else %}
+
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Good News</font></font></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Página inicial</font></font><span class="sr-only"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">(atual)</font></font></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Notícias regionais</font></font></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Noticias internacionais</font></font></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/create/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Publicar uma notícia</font></font></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/about/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sobre</font></font></a>
+          </li>
+        </ul>
+      <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="accounts/login"><i class="material-icons" style="font-size:30px;">person</i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="signup/"><i class="material-icons" style="font-size:30px;">person_add</i></a>
+            </li>
+      </ul>
+      </div>
+    </nav>
+
+    {%endif%}
+
+<div class="container" style="margin-top: 100px;">
+      <h1 class="my-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sobre nós
+         </font></font><small><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">É bom conhecer!</font></font></small>
+      </h1>
+      <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Site com as mais diversas notícias. </font><font style="vertical-align: inherit;">Sobre economia, política, assuntos regionais e internacionais.</font></font></p>
+
+      <!-- Team Members Row -->
+      <div class="row">
+        <div class="col-lg-12">
+          <h2 class="my-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nosso time</font></font></h2>
+        </div>
+        <div class="col-lg-4 col-sm-6 text-center mb-4">
+          <img class="rounded-circle img-fluid d-block mx-auto" src="https://observatoriodatelevisao.bol.uol.com.br/wp-content/uploads/2017/07/William-Bonner.jpg" alt="" >
+          <h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                William Bonner
+             </font></font><small><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Redator</font></font></small>
+          </h3>
+      </div>
+
+    </div>
+{% endblock %}

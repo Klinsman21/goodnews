@@ -1,0 +1,156 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}Base file{% endblock %}</title>
+  <meta charset="utf-8" lang="pt-br">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<style>
+.img1 {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+body{
+  background-image: url(https://static1.squarespace.com/static/5900daa5e3df28ef8fd30429/t/59e49e2f7131a5f2738c7af2/1508154930095/prn-trader-news-background.jpg?format=2500w);
+}
+div.center {
+  width: 500px;
+  height: 200px;
+  display: block;
+  background-color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 1px 1px 10px 1px #888888;
+}
+div.center4 {
+  width: 500px;
+  height: 400px;
+  display: block;
+  background-color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 1px 1px 10px 1px #888888;
+}
+div.center2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+div.center3 {
+  display: block;
+  background-color: #ffffff;
+  position: absolute;
+  top: 100px;
+  left: 33%;
+  padding: 20px;
+  box-shadow: 1px 1px 10px 1px #888888;
+ 
+}
+.input-margin{
+    margin-top: 30px;
+}
+ 
+ .upper, .lower {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.upper {
+  top: 0;
+  height: 50%;
+  background-color: #2f3640;  
+}
+
+.lower {
+  bottom: 0;
+  height: 50%;
+  background-color: #576574;    
+}
+ button {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+
+.box {
+  display: inline-block;
+  width: 350px;
+  height: 200px;
+  margin: 1em;
+  margin-top: 50px;
+  background-color: #ffffff;
+  box-shadow: 1px 1px 10px 1px #888888;
+}
+
+.block-color{
+  background-color: #ffffff;
+}
+
+.title-h1{
+  position: relative;
+  top: 50%;
+  transform: translatey(-50%);
+}
+
+.text-relative{
+    color: white;
+    background-color: #576574;
+    filter: alpha(opacity=80);
+    width: 70%;
+    border-radius: 10px;
+    margin: 0px auto;
+    padding: 10px;
+    word-break: break-all; 
+}
+
+.navbar-custom {
+  color:#57606f;
+  background-color: #fffa65;
+}
+.color-custom {
+  color:#57606f;
+}
+
+
+</style>
+
+<script>
+  function AlterColor(id) {
+    document.getElementById(id).style.backgroundColor = "white";
+    document.getElementById(id).style.color = "black";
+}
+  function AlterColor2(id) {
+    document.getElementById(id).style.backgroundColor = "#576574";
+    document.getElementById(id).style.color = "white";
+}
+</script>
+</script>
+  	
+
+</head>
+<body>
+  <main>
+    {% block content %}
+    {% endblock %}
+  </main>
+
+</body>
+</html>

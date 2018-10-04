@@ -1,0 +1,108 @@
+{% extends 'base.html' %} 
+
+{% block title %}Good News{% endblock %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+
+
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Good News</font></font></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Página inicial</font></font><span class="sr-only"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">(atual)</font></font></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/regional/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Notícias regionais</font></font></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/internacional/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Noticias internacionais</font></font></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/create/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Publicar uma notícia</font></font></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sobre</font></font></a>
+          </li>
+        </ul>
+      <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link"><i class="material-icons" style="font-size:30px;">how_to_reg</i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="accounts/logout"><i class="material-icons" style="font-size:30px;">power_settings_new</i></a>
+            </li>
+      </ul>
+      </div>
+    </nav>
+
+    {% for x in object_list %}
+
+      <div class="text-relative" style="margin-top: 90px; text-align: center; filter: blur;">
+        <h1>{{x.titulo}}</h1>
+        <button class="btn btn-primary" onclick="AlterColor2({{x.id}})">Modo escuro</button>
+        <button class="btn btn-primary" onclick="AlterColor({{x.id}})">Modo claro</button><br><br>
+        <img class="img1" src="{{ MEDIA_URL }}{{ x.image }}" alt="" ><br>
+        <p>{{x.descricao}}</p>
+        
+      </div>
+    {% endfor %}
+  {% else %}
+
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Good News</font></font></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Página inicial</font></font><span class="sr-only"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">(atual)</font></font></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/regional/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Notícias regionais</font></font></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/internacional/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Noticias internacionais</font></font></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/create/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Publicar uma notícia</font></font></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sobre</font></font></a>
+          </li>
+        </ul>
+      <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="accounts/login"><i class="material-icons" style="font-size:30px;">person</i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="signup/"><i class="material-icons" style="font-size:30px;">person_add</i></a>
+            </li>
+      </ul>
+      </div>
+    </nav>
+
+    {% for x in object_list %}
+
+      <div id="{{x.id}}" class="text-relative" style="margin-top: 90px; text-align: center; filter: blur;">
+        <h1>{{x.titulo}}</h1>
+        <button class="btn btn-primary" onclick="AlterColor2({{x.id}})">Modo escuro</button>
+        <button class="btn btn-primary" onclick="AlterColor({{x.id}})">Modo claro</button><br><br>
+        <img class="img1" src="{{ MEDIA_URL }}{{ x.image }}" alt="" ><br>
+        <p>{{x.descricao}}</p>
+        
+      </div>
+    {% endfor %}
+
+
+    {%endif%}
+
+   
+{% endblock %}

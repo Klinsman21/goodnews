@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="upper">
+   <a class="navbar-brand" style="vertical-align: center; color: white; margin-left: 20px; margin-top: 20px;" href="/"><i class="material-icons" style="font-size:40px;">arrow_back_ios</i></a>
+</div>
+<div class="lower">
+    
+</div>
+
+<div class="center top-buffer" style="background-color: #8395a7;">  
+        <div class="text-center">
+        <div style="margin-top:20px; width: auto; margin-right: 50px; margin-left: 50px;">
+        <form method="POST" class="form-signin">
+                {% csrf_token %}
+
+                <label style="color: white;" class="container-fluid">Nome de usuário:</label>
+                <input style="background-color: #c8d6e5;" type="text" name="username" id="id_username" required class="form-control">
+
+                <label style="color: white;" class="container-fluid">Senha:</label>
+                <input style="background-color: #c8d6e5;" type="password" name="password" id="id_password" required class="form-control"><br>
+
+                <div class="btn-group" role="group" aria-label="Basic example">
+                <button  style="background-color: #2f3640; margin-top: 25px;"  type="submit" name="submit" class="btn btn-primary">Login</button>
+                <!--
+                <button type="submit" name="submit" class="btn btn-primary">Login</button>
+                <button style="margin: 5px;" onclick="window.location.href='/'" name="submit" value="b2"  class="btn btn-secundary">Home</button>
+            -->
+                </div>
+                
+        </form>
+     </div>   
+    </div>
+</div>
+
+{% endblock %}
+
+	
+

@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+
+
+
+
+<div class="upper">
+   <a class="navbar-brand" style="vertical-align: center; color: white; margin-left: 20px; margin-top: 20px;" href="/"><i class="material-icons" style="font-size:40px;">arrow_back_ios</i></a>
+</div>
+<div class="lower">
+    
+</div>
+
+<div class="center4 top-buffer" style="background-color: #8395a7;">  
+        <div class="text-center">
+        <div style="margin-top:20px; width: auto; margin-right: 50px; margin-left: 50px;">
+        <form method="POST" class="form-signin">
+                {% csrf_token %}
+
+                <input style="margin-top: 10px; background-color: #c8d6e5;"  "type="text" name="username" class="form-control" placeholder="UserName" required id="id_username">
+                <p style="color: white;">Não use caracters especiais como: @, #, $</p><br>
+                
+                <input style="background-color: #c8d6e5;" required type="password" name="password1" class="form-control" placeholder="Senha" id="id_password1"><br>
+                <ul style="text-align: left;">
+                    <li style="color: white;">Sua senha não pode ser tão parecida com suas outras informações pessoais.</li>
+                    <li style="color: white;">Sua senha precisa conter pelo menos 8 caracteres.</li>
+                    <li style="color: white;">Sua senha não pode ser uma senha habitualmente utilizada.</li>
+                    <li style="color: white;">Sua senha não pode ser inteiramente numérica.</li>
+                </ul>
+                 
+
+                <input style="background-color: #c8d6e5;" required type="password" name="password2" class="form-control" placeholder="Confirme Senha" id="id_password2"><br>
+
+                <div class="btn-group" role="group" aria-label="Basic example">
+                
+                <button style="margin: 5px; background-color: #2f3640;" type="submit" name="submit" class="btn btn-primary">Cadastrar</button>
+
+                </div>
+                </div>
+                <div class="form-group">
+
+        </form>
+                
+        </form>
+     </div>   
+    </div>
+</div>
+
+{% endblock %}
